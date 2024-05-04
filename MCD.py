@@ -7,19 +7,19 @@ def mcd(a, b):
         a, b = b, a % b
     return a
 
-def mcd_cuatro_numeros(a, b, c, d):
+def mcd_cuatro_numeros():
     """
-    Función para calcular el MCD de cuatro números utilizando la función mcd.
+    Función para calcular el MCD de cuatro números ingresados por el usuario.
     """
+    a = int(input("Ingrese el primer número: "))
+    b = int(input("Ingrese el segundo número: "))
+    c = int(input("Ingrese el tercer número: "))
+    d = int(input("Ingrese el cuarto número: "))
+    
     mcd_ab = mcd(a, b)
     mcd_cd = mcd(c, d)
     return mcd(mcd_ab, mcd_cd)
 
 # Ejemplo de uso
-num1 = 24
-num2 = 36
-num3 = 48
-num4 = 60
-
-resultado = mcd_cuatro_numeros(num1, num2, num3, num4)
-print(f"El Máximo Común Divisor de {num1}, {num2}, {num3} y {num4} es: {resultado}")
+resultado = mcd_cuatro_numeros()
+print(f"El Máximo Común Divisor de los cuatro números ingresados es: {resultado}")
