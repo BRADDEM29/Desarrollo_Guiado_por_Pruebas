@@ -9,18 +9,18 @@ def mcd(a, b):
         a, b = b, a % b
     return a
 
-def MinimoComunDivisor(a, b, c, d):
+def MaximoComunDivisor(a, b, c, d):
     mcd_ab = mcd(a, b)
     mcd_cd = mcd(c, d)
     return mcd(mcd_ab, mcd_cd)
 
 class TestMinimoComunDivisor(unittest.TestCase):
-    def test_MinimoComunDivisor(self):
+    def test_MaximoComunDivisor(self):
         """
         Prueba el caso del minimo comun divisor
         """
         resultado_esperado = 12
-        self.assertEqual(MinimoComunDivisor(24,36,48,60), resultado_esperado)
+        self.assertEqual(MaximoComunDivisor(24,36,48,60), resultado_esperado)
 
-if __name__ == "__main__":
+if  __name__ == "__main__":
     unittest.main()
